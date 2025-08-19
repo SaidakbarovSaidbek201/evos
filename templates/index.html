@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVOS | Tez. Mazali. Sifatli.</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Header -->
+<header class="site-header" role="banner">
+    <div class="container header-row">
+      <!-- Left: Logo -->
+      <a href="/" class="logo" aria-label="EVOS — на главную">
+        <!-- можно заменить на <img src="logo.svg"> -->
+        <span class="logo-box">EVOS</span>
+      </a>
+  
+      <!-- Center: Main nav -->
+      <nav class="main-nav" role="navigation" aria-label="Main">
+        <ul class="nav-list">
+          <li class="nav-item nav-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Biz haqimizda
+              <span class="icon-caret" aria-hidden="true"></span>
+            </button>
+            <!-- пример выпадающего меню -->
+            <div class="dropdown-menu" role="menu">
+              <a class="dropdown-item" href="#">Kompaniya</a>
+              <a class="dropdown-item" href="#">Yangiliklar</a>
+              <a class="dropdown-item" href="#">Kontaktlar</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Filiallar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Vakantlar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Table Service</a></li>
+          <li class="nav-item">
+            <a class="nav-link kids" href="#" aria-label="EVOS Kids">
+              <span class="kids-badge">kids</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+  
+      <!-- Right: Controls -->
+      <div class="header-actions">
+        <!-- Location -->
+        <div class="action action-location">
+          <button class="btn-ghost" aria-haspopup="true" aria-expanded="false">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+            <span class="action-text">Manzilingizni tanlang</span>
+            <span class="icon-caret" aria-hidden="true"></span>
+          </button>
+          <!-- выпадающий список адресов -->
+          <div class="dropdown-menu" role="menu">
+            <button class="dropdown-item" role="menuitem">Toshkent</button>
+            <button class="dropdown-item" role="menuitem">Samarqand</button>
+            <button class="dropdown-item" role="menuitem">Buxoro</button>
+          </div>
+        </div>
+  
+        <!-- Cart -->
+        <a class="action action-cart" href="#" aria-label="Savat">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M6 6 5 3H2"/></svg>
+          <span class="action-text">Savat</span>
+          <span class="badge" aria-label="Items in cart">0</span>
+        </a>
+  
+        <!-- Language -->
+        <div class="action action-lang">
+          <button class="btn-ghost" aria-haspopup="true" aria-expanded="false" aria-label="Tilni tanlang">
+            <span class="flag flag-uz" aria-hidden="true"></span>
+            <span class="icon-caret" aria-hidden="true"></span>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <button class="dropdown-item" role="menuitem" data-lang="uz">Oʻzbekcha</button>
+            <button class="dropdown-item" role="menuitem" data-lang="ru">Русский</button>
+            <button class="dropdown-item" role="menuitem" data-lang="en">English</button>
+          </div>
+        </div>
+  
+        <!-- Account -->
+        <a class="action action-user" href="#" aria-label="Profil">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-5 0-9 2.5-9 5.5V22h18v-2.5C21 16.5 17 14 12 14z"/></svg>
+        </a>
+  
+        <!-- Mobile toggle -->
+        <button class="hamburger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile menu (скрыт по умолчанию, покажешь через CSS/JS) -->
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <ul class="mobile-nav">
+        <li><button class="mobile-link">Biz haqimizda</button></li>
+        <li><a class="mobile-link" href="#">Filiallar</a></li>
+        <li><a class="mobile-link" href="#">Vakantlar</a></li>
+        <li><a class="mobile-link" href="#">Table Service</a></li>
+        <li><a class="mobile-link" href="#">Kids</a></li>
+        <li class="divider"></li>
+        <li><button class="mobile-link">Manzilni tanlash</button></li>
+        <li><a class="mobile-link" href="#">Savat</a></li>
+        <li><button class="mobile-link">Til: Oʻzbekcha</button></li>
+        <li><a class="mobile-link" href="#">Profil</a></li>
+      </ul>
+    </div>
+  </header>
+  
+</body>
+</html>
